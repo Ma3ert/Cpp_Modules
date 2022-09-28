@@ -6,7 +6,7 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/26 11:14:55 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/09/27 15:44:22 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/09/28 16:42:40 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,6 @@ fclean: clean
 	rm -f $(NAME)
 
 hoho: all clean
-	clear
+	clear && ./phonebook
 
 re: fclean all
