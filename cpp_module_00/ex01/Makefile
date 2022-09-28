@@ -6,7 +6,7 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/26 11:14:55 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/09/28 16:42:40 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/09/28 18:51:51 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ HEADERS = PhoneBook.hpp Contact.hpp
 
 CC = c++
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 

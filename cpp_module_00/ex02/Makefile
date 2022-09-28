@@ -5,16 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/26 09:54:20 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/09/28 18:54:32 by Ma3ert           ###   ########.fr        #
+#    Created: 2022/09/28 18:50:55 by Ma3ert            #+#    #+#              #
+#    Updated: 2022/09/28 18:54:59 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = megaphone.cpp
+SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = megaphone
+NAME = phonebook
+
+HEADERS = PhoneBook.hpp Contact.hpp
 
 CC = c++
 
@@ -22,7 +24,7 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADERS)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
 %.o : %.c $(HEADERS)
