@@ -6,17 +6,17 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 18:50:55 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/09/28 18:54:59 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/09/29 18:55:17 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp
+SRC = account.cpp test.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = phonebook
+NAME = LostFile
 
-HEADERS = PhoneBook.hpp Contact.hpp
+HEADERS = header.h account.hpp
 
 CC = c++
 
@@ -37,6 +37,6 @@ fclean: clean
 	rm -f $(NAME)
 
 hoho: all clean
-	clear
+	clear && ./LostFile
 
 re: fclean all
