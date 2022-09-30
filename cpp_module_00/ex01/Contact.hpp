@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 15:11:57 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/09/28 15:01:29 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/09/30 12:46:57 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ class Contact
 	public:
 		void	FillInfo(Contact *NewContact, int index);
 		void	Display(Contact ToDisplay);
+		void	DisplayLess(Contact ToDisplay);
 };
