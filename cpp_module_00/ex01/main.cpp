@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:14:17 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/09/30 15:58:01 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/02 11:32:02 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,20 @@ int main (int ac, char **av)
 			MyPhoneBook.AddContact();
 		else if (!prompt.compare("SEARCH"))
 		{
-			MyPhoneBook.DisplayAvailabelContact();
-			std::cout << "can you give me the index of\nthe contact you're looking for(0 ~ 7): ";
-			getline(std::cin, index_char);
-			if (std::cin.eof())
-				break ;
-			if (index_char.length() == 1 && isdigit(index_char[0]))
-			{
-				index = atoi(index_char.c_str());
-				MyPhoneBook.Search(index);
+			if (MyPhoneBook.DisplayAvailabelContact())
+			{	
+				std::cout << "\ncan you give me the index of\nthe contact you're looking for(0 ~ 7): ";
+				getline(std::cin, index_char);
+				if (std::cin.eof())
+					break ;
+				if (index_char.length() == 1 && isdigit(index_char[0]))
+				{
+					index = atoi(index_char.c_str());
+					MyPhoneBook.Search(index);
+				}
+				else
+					std::cout << "oops check the index !!!" << std::endl;
 			}
-			else
-				std::cout << "oops check the index !!!" << std::endl;
 		}
 		else
 			std::cout << "please read the instruction carefully !!!" << std::endl;
