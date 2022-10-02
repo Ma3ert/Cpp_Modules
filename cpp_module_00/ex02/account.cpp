@@ -6,11 +6,18 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:29:48 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/09/29 19:07:32 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/02 16:04:52 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "account.hpp"
+#include <ctime>
+#include <iostream>
+
+int	Account::_nbAccounts = 0;
+int	Account::_totalAmount = 0;
+int	Account::_totalNbDeposits = 0;
+int	Account::_totalNbWithdrawals = 0;
 
 bool	Account::makeWithdrawal(int wihtdrawal)
 {
@@ -70,7 +77,7 @@ void Account::_displayTimestamp(void)
 
 	time(&t);
 	tmp = localtime( &t );
-	std::strftime(MY_TIME, 20, "[%Y%m%e_%H%M%S]", tmp);
+	std::strftime(MY_TIME, 20, "[%Y%m%d_%H%M%S]", tmp);
 	std::cout << MY_TIME << ' ';
 }
 

@@ -5,18 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/09/28 18:50:55 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/02 16:01:30 by Ma3ert           ###   ########.fr        #
+#    Created: 2022/10/02 15:56:15 by Ma3ert            #+#    #+#              #
+#    Updated: 2022/10/02 15:56:37 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = account.cpp test.cpp
+SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = LostFile
-
-HEADERS = account.hpp
+NAME = brain
 
 CC = c++
 
@@ -24,10 +22,10 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(HEADERS)
+$(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o : %.c $(HEADERS)
+%.o : %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
@@ -37,6 +35,6 @@ fclean: clean
 	rm -f $(NAME)
 
 hoho: all clean
-	clear && ./LostFile
+	clear
 
 re: fclean all
