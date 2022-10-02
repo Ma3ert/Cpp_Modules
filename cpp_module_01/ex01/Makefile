@@ -6,15 +6,15 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 15:56:15 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/02 20:10:15 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/10/02 20:28:55 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp newZombie.cpp randomChump.cpp zombie.cpp
+SRC = main.cpp zombieHorde.cpp zombie.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = brain
+NAME = brainHorde
 
 HEADER = zombie.hpp 
 
@@ -37,6 +37,6 @@ fclean: clean
 	rm -f $(NAME)
 
 hoho: all clean
-	clear && ./brain
+	clear && ./$(NAME)
 
 re: fclean all

@@ -1,36 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   randomChump.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 15:57:04 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/02 20:14:57 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/10/02 16:26:08 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/10/02 20:09:17 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "zombie.hpp"
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-
-#include <iostream>
-#include <string>
-
-class Zombie
+void	randomChump(std::string name)
 {
-	private:
-		std::string	name;
-	public:
-		Zombie( std::string newName );
-		Zombie( void );
-		void	setName( std::string newName );
-		void	setName( void );
-		void Announce( void );
-		~Zombie( void );
-};
+	Zombie	newZombie(name);
 
-Zombie	*newZombie( std::string name );
-void	randomChump( std::string name );
-
-#endif
+	newZombie.Announce();
+}
