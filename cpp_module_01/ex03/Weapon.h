@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 15:57:04 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/03 15:37:40 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/10/03 18:28:24 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/10/03 18:29:20 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef	WEAPON_H
+#define	WEAPON_H
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-
-#include <iostream>
-#include <string>
-
-class Zombie
-{
-	private:
-		std::string	name;
-	public:
-		void		setName(std::string newName);
-		void		setName(void);
-		~Zombie(void);
-		void Announce( void );
-};
-
-Zombie	*newZombie( std::string name );
-void	randomChump( std::string name );
-Zombie* zombieHorde( int N, std::string name );
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 #endif

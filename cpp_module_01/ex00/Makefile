@@ -6,7 +6,7 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/02 15:56:15 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/02 20:10:15 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/10/03 16:04:16 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,10 +24,10 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ) $(HEADER)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o : %.c
+%.o : %.c $(HEADER)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

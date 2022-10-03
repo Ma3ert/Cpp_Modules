@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/02 15:56:15 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/03 16:04:43 by Ma3ert           ###   ########.fr        #
+#    Created: 2022/10/03 16:03:28 by Ma3ert            #+#    #+#              #
+#    Updated: 2022/10/03 18:23:24 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp zombieHorde.cpp zombie.cpp
+SRC = main.cpp HumanA.cpp Weapon.cpp HumanB.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = brainHorde
+NAME = violence
 
-HEADER = zombie.hpp 
+HEADER = HumanA.hpp HumanB.hpp Weapon.hpp 
 
 CC = c++
 

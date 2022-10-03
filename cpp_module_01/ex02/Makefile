@@ -5,18 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/02 15:56:15 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/03 16:04:43 by Ma3ert           ###   ########.fr        #
+#    Created: 2022/10/03 15:40:55 by Ma3ert            #+#    #+#              #
+#    Updated: 2022/10/03 15:57:23 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp zombieHorde.cpp zombie.cpp
+SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = brainHorde
-
-HEADER = zombie.hpp 
+NAME = HI
 
 CC = c++
 
@@ -24,10 +22,10 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(HEADER)
+$(NAME): $(OBJ)
 	$(CC) $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o : %.c $(HEADER)
+%.o : %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

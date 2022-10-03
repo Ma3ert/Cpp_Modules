@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/02 15:57:04 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/03 15:37:40 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/10/03 17:58:17 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/10/03 18:56:40 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Weapon.hpp"
 
-#ifndef ZOMBIE_HPP
-#define ZOMBIE_HPP
-
-#include <iostream>
-#include <string>
-
-class Zombie
+std::string &Weapon::getType(void)
 {
-	private:
-		std::string	name;
-	public:
-		void		setName(std::string newName);
-		void		setName(void);
-		~Zombie(void);
-		void Announce( void );
-};
+	std::string	&typeREF = type;
+	return (typeREF);
+}
 
-Zombie	*newZombie( std::string name );
-void	randomChump( std::string name );
-Zombie* zombieHorde( int N, std::string name );
+void	Weapon::setType( std::string newType) { type = newType; }
 
-#endif
+Weapon::Weapon( std::string newType ) { setType( newType ); }
+
+Weapon::Weapon(void) 
+{
+	setType( "sbardila" );
+}
