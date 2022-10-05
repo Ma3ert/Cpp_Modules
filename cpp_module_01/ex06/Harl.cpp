@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:09:34 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/05 12:11:30 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/05 12:51:31 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 std::string	Harl::availableLevel(int i)
 {
-	std::string	levels[4] = {"DEBUG", "INFO", "ERROR", "WARNING"};
+	std::string	levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	return (levels[i++]);
 }
 
@@ -23,14 +23,17 @@ void Harl::debug( void )
 {
 	std::cout << "DEBUG MESSAGE !!" << std::endl;
 }
+
 void Harl::info( void )
 {
 	std::cout << "INFO MESSAGE !!" << std::endl;
 }
+
 void Harl::warning( void )
 {
 	std::cout << "WARNING MESSAGE !!" << std::endl;
 }
+
 void Harl::error( void )
 {
 	std::cout << "ERROR MESSAGE !!"	<< std::endl;
@@ -44,8 +47,8 @@ void Harl::complain( std::string level )
 	{
 		&Harl::debug,
 		&Harl::info,
-		&Harl::error,
 		&Harl::warning,
+		&Harl::error,
 	};
 	lvl = availableLevel(index);
 	while (index < 4 && lvl.compare(level))
@@ -53,20 +56,16 @@ void Harl::complain( std::string level )
 		index++;
 		lvl = availableLevel(index);
 	}
-	std::cout << "this is your i: " << index << std::endl;
 	switch (index)
 	{
 		case 0:
-			(this->*funPtrs[index])();
-			break;
+			(this->*funPtrs[index++])();
 		case 1:
-			(this->*funPtrs[index])();
-			break;
+			(this->*funPtrs[index++])();
 		case 2:
-			(this->*funPtrs[index])();
-			break;
+			(this->*funPtrs[index++])();
 		case 3:
-			(this->*funPtrs[index])();
+			(this->*funPtrs[index++])();
 			break;
 		default:
 			std::cout << "WOWOW CHECK YOU INPUT !!" << std::endl;

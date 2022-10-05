@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 16:10:10 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/05 12:06:28 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/10/04 16:09:06 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/10/05 12:40:01 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
-
 #include "Harl.h"
 
-
-class Harl
+int main(int ac, char **av)
 {
-	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
-	public:
-		std::string	availableLevel(int i);
-		void complain( std::string level );
-};
-
-#endif
+	Harl newHarl;
+	if (ac != 2)
+	{
+		std::cout << "PARAM ERROR !!!" << std::endl;
+		return (1);
+	}
+	newHarl.complain(av[1]);
+	return (0);
+}

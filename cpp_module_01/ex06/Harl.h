@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Harl.hpp                                           :+:      :+:    :+:   */
+/*   Harl.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 16:10:10 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/05 12:06:28 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/10/04 16:09:39 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/10/04 19:00:08 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HARL_HPP
-#define HARL_HPP
+#ifndef HARL_H
+#define HARL_H
 
-#include "Harl.h"
+#include <iostream>
+#include <string>
+#include "Harl.hpp"
 
-
-class Harl
-{
-	private:
-		void debug( void );
-		void info( void );
-		void warning( void );
-		void error( void );
-	public:
-		std::string	availableLevel(int i);
-		void complain( std::string level );
-};
+typedef  void (Harl:: *funPtr) (void);
 
 #endif
+
