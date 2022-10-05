@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/02 15:57:13 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/02 20:34:21 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/05 13:52:16 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ Zombie::~Zombie(void)	{ std::cout << name << std::endl; }
 
 void	Zombie::Announce(void)
 {
-	std::cout << name << ": wa bzaaaaaaaf dyal sbardilat" << std::endl;
+	std::cout << name << ": wa 7na ktaaaaaaar" << std::endl;
 }

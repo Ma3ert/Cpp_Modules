@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:48:03 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/04 15:57:29 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/05 15:38:23 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 int main(int ac, char **av)
 {
 	size_t			pos;
+	size_t			pos_rep;
 	std::string		line;
 	std::string		s;
 	std::string		s1;
 	std::string		s2;
+	int				rep = 1;
 	if (ac != 4)
 	{
 		error:
@@ -38,12 +40,22 @@ int main(int ac, char **av)
 	{
 		getline(infile, line);
 		pos = line.find(s1, 0);
+		pos_rep = pos;
 		if (pos != -1)
 		{
 			outfile << line.substr(0, pos);
+			fill:
 			outfile << s2;
-			outfile << line.substr(pos + s1.length(), -1);
-			outfile << std::endl;
+			pos_rep = line.find(s1, pos_rep + 1);
+			if (pos_rep != -1)
+			{
+				rep++;
+				goto fill;
+			}
+			outfile << line.substr(pos + (s1.length() * rep), -1);
+			if (!infile.eof())
+				outfile << std::endl;
+			rep = 1;
 		}
 		else
 			outfile << line << std::endl;
