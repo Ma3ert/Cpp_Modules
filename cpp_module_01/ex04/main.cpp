@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 12:48:03 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/05 15:38:23 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/06 13:58:20 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int main(int ac, char **av)
 		getline(infile, line);
 		pos = line.find(s1, 0);
 		pos_rep = pos;
-		if (pos != -1)
+		if (pos != -1 && !s1.empty())
 		{
 			outfile << line.substr(0, pos);
 			fill:
