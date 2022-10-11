@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 10:23:18 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/07 18:28:27 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/10 18:18:23 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ class Fixed
 {
 	private:
 		int					value;
-		int					raw;
 		const static int	Fraction = 8;
 	public:
 		Fixed	&operator = (Fixed &toAssign);

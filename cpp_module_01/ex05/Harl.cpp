@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 16:09:34 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/05 12:11:30 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/10 12:25:09 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,6 @@ void Harl::complain( std::string level )
 		index++;
 		lvl = availableLevel(index);
 	}
-	std::cout << "this is your i: " << index << std::endl;
 	switch (index)
 	{
 		case 0:

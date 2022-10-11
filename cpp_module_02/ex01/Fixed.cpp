@@ -6,13 +6,21 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 10:23:28 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/07 18:29:39 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/11 11:45:49 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed	&Fixed::operator = (Fixed &toAssign) 
+float	Fixed::toFloat(void) const { return (value / (float)(1 << Fraction)); }
+
+int		Fixed::toInt(void) const { return (value >> Fraction); }
+
+Fixed::Fixed(const int num) { value = num << Fraction; }
+
+Fixed::Fixed(const float num) { value = num * (float)(1 << Fraction); }
+
+Fixed	&Fixed::operator = (Fixed const &toAssign)
 {
 	std::cout << "the assign operator called" << std::endl;
 	if (this != &toAssign)
@@ -26,10 +34,10 @@ Fixed::Fixed( void )
 	value = 0;
 }
 
-Fixed::Fixed( Fixed &toCopy)
+Fixed::Fixed( Fixed const &toCopy)
 { 
 	std::cout << "the copy constractor called" << std::endl;
-	value = toCopy.value;
+	*this = toCopy;
 }
 
 Fixed::~Fixed() { std::cout << "the destructor called" << std::endl; }
