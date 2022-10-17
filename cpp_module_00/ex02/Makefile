@@ -6,7 +6,7 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/28 18:50:55 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/02 16:01:30 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/10/17 10:04:32 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,6 +37,9 @@ fclean: clean
 	rm -f $(NAME)
 
 hoho: all clean
-	clear && ./LostFile
+	clear && ./$(NAME)
+
+sbrld: all clean
+	clear
 
 re: fclean all

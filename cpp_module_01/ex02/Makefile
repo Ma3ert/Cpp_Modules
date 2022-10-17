@@ -6,7 +6,7 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/03 15:40:55 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/03 15:57:23 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/10/17 10:04:53 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,5 +36,8 @@ fclean: clean
 
 hoho: all clean
 	clear && ./$(NAME)
+
+sbrld: all clean
+	clear
 
 re: fclean all
