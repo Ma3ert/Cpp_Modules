@@ -6,11 +6,11 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/07 10:22:35 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/17 10:42:09 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/10/17 21:13:15 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Fixed.cpp Point.cpp
+SRC = main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

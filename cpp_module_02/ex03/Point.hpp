@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 10:25:40 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/17 12:51:06 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/17 21:43:59 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ class Point
 		Fixed const	y;
 	public:
 		Point			&operator = (Point const &toAssign);
-		Fixed			&triangleArea(Point const A, Point const B);
+		Fixed			triangleArea(Point const &A, Point const &B) const ;
 		Point(Point const &toCopy);
-		Point(float x, float y);
+		Point(float const newX, float const newY);
 		Point(void);
 		~Point();
 };

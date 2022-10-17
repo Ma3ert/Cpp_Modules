@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 10:23:18 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/17 17:58:18 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/17 21:47:38 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@ class Fixed
 		int					value;
 		const static int	Fraction = 8;
 	public:
-		Fixed			&operator = (Fixed &toAssign);
+		Fixed			&operator = (Fixed const &toAssign);
 		Fixed			operator + (Fixed const &objet);
 		Fixed			operator ++ (int inc);
 		Fixed			operator -- (int inc);
 		Fixed			operator ++ (void);
 		Fixed			operator -- (void);
-		Fixed			operator - (Fixed const &objet);
-		Fixed			operator * (Fixed const &objet);
+		Fixed			operator - (Fixed const &objet) const;
+		Fixed			operator * (Fixed const &objet) const ;
 		Fixed			operator / (Fixed const &objet);
 		bool			operator != (Fixed const &toCompare);
 		bool			operator == (Fixed const &toCompare);
@@ -49,5 +49,7 @@ class Fixed
 		Fixed(void);
 		~Fixed();
 };
+
+std::ostream	&operator << (std::ostream &out, const Fixed &param);
 
 #endif

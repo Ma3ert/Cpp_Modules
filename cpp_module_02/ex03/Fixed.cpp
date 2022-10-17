@@ -6,11 +6,12 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 10:23:28 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/17 17:54:15 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/17 21:45:39 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+#include <unistd.h>
 
 							/* constractors */
 
@@ -28,7 +29,7 @@ Fixed::Fixed( Fixed const &toCopy)
 	*this = toCopy;
 }
 
-Fixed::~Fixed() { std::cout << ' '; }
+Fixed::~Fixed() {}
 
 							/* operators */
 
@@ -39,9 +40,8 @@ Fixed	&Fixed::operator = (Fixed const &toAssign)
 	return (*this);
 }
 
-Fixed	Fixed::operator - (Fixed const &objet)
+Fixed	Fixed::operator - (Fixed const &objet) const
 {
-	std::cout << "the sub operator called\n" << std::endl;
 	Fixed res;
 	res.value = value - objet.value;
 	return (res);
@@ -52,7 +52,7 @@ Fixed	Fixed::operator / (Fixed const &objet)
 	Fixed		ret(((float)value / (float)objet.value));
 	return (ret);
 }
-Fixed	Fixed::operator * (Fixed const &objet)
+Fixed	Fixed::operator * (Fixed const &objet) const
 {
 	Fixed		ret(this->toFloat() * objet.toFloat());
 	return (ret);
@@ -147,6 +147,5 @@ int 	Fixed::getRawBits( void ) const { return (value); }
 
 void 	Fixed::setRawBits( int const raw ) 
 { 
-	std::cout << "the setRawBits() called\n" << std::endl;
 	value = raw; 
 }
