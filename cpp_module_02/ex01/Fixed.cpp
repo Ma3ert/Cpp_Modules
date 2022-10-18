@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 10:23:28 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/11 11:45:49 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/18 10:40:30 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,17 @@ float	Fixed::toFloat(void) const { return (value / (float)(1 << Fraction)); }
 
 int		Fixed::toInt(void) const { return (value >> Fraction); }
 
-Fixed::Fixed(const int num) { value = num << Fraction; }
+Fixed::Fixed(const int num) 
+{
+	std::cout << "the int constrator called" << std::endl;
+	value = num << Fraction; 
+}
 
-Fixed::Fixed(const float num) { value = num * (float)(1 << Fraction); }
+Fixed::Fixed(const float num) 
+{
+	std::cout << "the float constrator called" << std::endl;
+	value = num * (float)(1 << Fraction);
+}
 
 Fixed	&Fixed::operator = (Fixed const &toAssign)
 {

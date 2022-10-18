@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 10:23:28 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/17 10:00:06 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/18 10:49:56 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Fixed::Fixed( Fixed const &toCopy)
 	*this = toCopy;
 }
 
-Fixed::~Fixed() { std::cout << ' '; }
+Fixed::~Fixed() {}
 
 							/* operators */
 
@@ -39,7 +39,7 @@ Fixed	&Fixed::operator = (Fixed const &toAssign)
 	return (*this);
 }
 
-Fixed	Fixed::operator - (Fixed const &objet)
+Fixed	Fixed::operator - (Fixed const &objet) const
 {
 	std::cout << "the sub operator called\n" << std::endl;
 	Fixed res;
@@ -47,50 +47,51 @@ Fixed	Fixed::operator - (Fixed const &objet)
 	return (res);
 }
 
-Fixed	Fixed::operator / (Fixed const &objet)
+Fixed	Fixed::operator / (Fixed const &objet) const
 {
 	Fixed		ret(((float)value / (float)objet.value));
 	return (ret);
 }
-Fixed	Fixed::operator * (Fixed const &objet)
+
+Fixed	Fixed::operator * (Fixed const &objet) const
 {
 	Fixed		ret(this->toFloat() * objet.toFloat());
 	return (ret);
 }
 
-Fixed	Fixed::operator + (Fixed const &objet)
+Fixed	Fixed::operator + (Fixed const &objet) const
 {
 	Fixed res;
 	res.value = value + objet.value;
 	return (res);
 }
 
-bool	Fixed::operator!= (Fixed const &toCompare)
+bool	Fixed::operator!= (Fixed const &toCompare) const
 {
 	return (this->value != toCompare.value);
 }
 
-bool	Fixed::operator== (Fixed const &toCompare)
+bool	Fixed::operator== (Fixed const &toCompare) const
 {
 	return (this->value == toCompare.value);
 }
 
-bool	Fixed::operator<= (Fixed const &toCompare)
+bool	Fixed::operator<= (Fixed const &toCompare) const
 {
 	return (this->value <= toCompare.value);
 }
 
-bool	Fixed::operator>= (Fixed const &toCompare)
+bool	Fixed::operator>= (Fixed const &toCompare) const
 {
 	return (this->value >= toCompare.value);
 }
 
-bool	Fixed::operator> (Fixed const &toCompare)
+bool	Fixed::operator> (Fixed const &toCompare) const
 {
 	return (this->value > toCompare.value);
 }
 
-bool	Fixed::operator< (Fixed const &toCompare)
+bool	Fixed::operator< (Fixed const &toCompare) const
 {
 	return (this->value < toCompare.value);
 }
@@ -124,6 +125,20 @@ Fixed	Fixed::operator++(void)
 }
 
 							/* function members*/
+
+Fixed const& Fixed::Max(Fixed const &a, Fixed const &b)
+{
+	if (a < b)
+		return (b);
+	return (a);
+}
+
+Fixed const&	Fixed::Min(Fixed const &a, Fixed const &b)
+{
+	if (a > b)
+		return (b);
+	return (a);		
+}
 
 Fixed&	Fixed::Max(Fixed &a, Fixed &b)
 {
