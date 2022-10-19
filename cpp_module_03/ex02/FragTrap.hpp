@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 18:06:01 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/18 12:20:34 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/10/19 11:36:32 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/10/19 19:37:10 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_HPP
-#define HUMAN_HPP
+#ifndef FRAGTRAP_HPP
+#define FRAGTRAP_HPP
 
-#include "Weapon.hpp"
+#include <iostream>
+#include "ClapTrap.hpp"
 
-class HumanA
+class FragTrap : public ClapTrap
 {
-	private:
-		Weapon		*myWeapon;
-		std::string	name;
 	public:
-		void	attack(void);
-		HumanA(std::string humanName, Weapon &newWeapon);
+		void		highFivesGuys(void);
+		FragTrap	&operator = (FragTrap const &toAssign);
+		FragTrap(FragTrap const &toCopy);
+		FragTrap(std::string name);
+		FragTrap(void);
+		~FragTrap();
 };
 
 #endif

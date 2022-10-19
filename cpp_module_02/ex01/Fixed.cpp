@@ -6,13 +6,11 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 10:23:28 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/18 10:40:30 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/18 12:02:14 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-float	Fixed::toFloat(void) const { return (value / (float)(1 << Fraction)); }
 
 int		Fixed::toInt(void) const { return (value >> Fraction); }
 
@@ -21,6 +19,8 @@ Fixed::Fixed(const int num)
 	std::cout << "the int constrator called" << std::endl;
 	value = num << Fraction; 
 }
+
+float	Fixed::toFloat(void) const { return (value / (float)(1 << Fraction)); }
 
 Fixed::Fixed(const float num) 
 {
