@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:57:39 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/21 16:37:42 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/21 16:12:17 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-#define CLAPTRAP_HPP
+#ifndef DIAMONDTRAP_HPP
+#define DIAMONDTRAP_HPP
 
 #include <iostream>
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-class ClapTrap
+class DiamondTrap: public FragTrap, public ScavTrap
 {
-	protected:
+	private:
 		std::string name;
-		int			HitPoint;
-		int			EnergyPoint;
-		int			AttackDamage;
 	public:
-		ClapTrap	&operator = (ClapTrap const &toAssign);
-		bool		useEnergyPoint(void);
-		virtual void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
-		ClapTrap(ClapTrap const &toCopy);
-		ClapTrap(std::string name);
-		ClapTrap(void);
-		~ClapTrap();
+		DiamondTrap	&operator = (DiamondTrap const &toAssign);
+		DiamondTrap(DiamondTrap const &toCopy);
+		DiamondTrap(std::string name);
+		DiamondTrap(void);
+		void whoAmI();
+		~DiamondTrap();
 };
 
 #endif

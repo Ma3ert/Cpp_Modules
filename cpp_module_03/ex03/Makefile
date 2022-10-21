@@ -6,17 +6,17 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/21 16:51:48 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/10/21 16:52:37 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp ../ex01/ClapTrap.cpp FragTrap.cpp
+SRC = main.cpp ClapTrap.cpp ../ex02/FragTrap.cpp DiamondTrap.cpp ../ex01/ScavTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 NAME = FragTrap
 
-HEADER = ClapTrap.hpp ../ex01/FragTrap.hpp
+HEADER = ClapTrap.hpp FragTrap.hpp DiamondTrap.hpp
 
 CC = c++
 

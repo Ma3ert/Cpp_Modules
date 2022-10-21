@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:57:39 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/21 16:37:42 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/21 16:51:08 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class ClapTrap
 	public:
 		ClapTrap	&operator = (ClapTrap const &toAssign);
 		bool		useEnergyPoint(void);
-		virtual void attack(const std::string& target);
+		void attack(const std::string& target);
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 		ClapTrap(ClapTrap const &toCopy);

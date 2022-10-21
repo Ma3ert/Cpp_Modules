@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:36:17 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/21 16:45:23 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/19 19:59:50 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,17 +51,6 @@ FragTrap::FragTrap(void)
 FragTrap::~FragTrap()
 {
 	std::cout << "the destractor called (Fragtrap)" << std::endl;
-}
-
-void	FragTrap::attack(const std::string &target)
-{
-	if (useEnergyPoint())
-	{	
-		std::cout << this->name;
-		std::cout << " Attack " << target;
-		std::cout << " Causing " << this->AttackDamage;
-		std::cout << " form FragTrap" << std::endl;
-	}
 }
 
 void	FragTrap::highFivesGuys()
