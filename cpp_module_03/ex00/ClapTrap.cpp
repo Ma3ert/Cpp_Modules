@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:57:41 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/19 11:31:12 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/22 11:02:00 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,13 @@ ClapTrap::ClapTrap(ClapTrap const &toCopy)
 
 ClapTrap::ClapTrap(std::string name): HitPoint(10), EnergyPoint(10), AttackDamage(0)
 {
+	std::cout << "param constractor called" << std::endl;
 	this->name = name;
 }
 
 ClapTrap::ClapTrap(void): HitPoint(10), EnergyPoint(10), AttackDamage(0)
 {
+	std::cout << "default constractor called" << std::endl;
 	name = "Ma3ert";
 }
 
@@ -77,6 +79,8 @@ void ClapTrap::takeDamage(unsigned int amount)
 	if (useEnergyPoint())
 	{
 		HitPoint -= amount;
+		if (HitPoint < 0)
+			HitPoint = 0;
 		std::cout << "ClapTrap " << this->name;
 		std::cout << " take -" << amount << " HP";
 		std::cout << " of damage" << std::endl;

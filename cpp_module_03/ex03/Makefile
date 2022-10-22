@@ -6,11 +6,11 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/21 16:52:37 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/10/22 09:41:03 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp ClapTrap.cpp ../ex02/FragTrap.cpp DiamondTrap.cpp ../ex01/ScavTrap.cpp
+SRC = main.cpp ClapTrap.cpp FragTrap.cpp DiamondTrap.cpp ScavTrap.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

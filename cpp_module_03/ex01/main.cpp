@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:58:47 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/21 16:46:39 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/22 10:19:58 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ int main()
 	ScavTrap scav;
 	ScavTrap copyscav(scav);
 
+	sbardila.attack("none");
 	std::cout << "\n=========scav vs soldier===========" << std::endl;
 	
 	Soldier.attack("scav");

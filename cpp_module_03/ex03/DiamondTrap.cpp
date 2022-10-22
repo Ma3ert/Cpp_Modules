@@ -25,21 +25,23 @@ DiamondTrap	&DiamondTrap::operator = (DiamondTrap const &toAssign)
 	return (*this);
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap const &toCopy)
+DiamondTrap::DiamondTrap(DiamondTrap const &toCopy): ClapTrap(toCopy.name + "_clap_name"), 
+	FragTrap(toCopy.name + "_clap_name"), ScavTrap(toCopy.name + "_clap_name")
 {
 	std::cout << "the copy constrator called (DiamondTrap)" << std::endl;
 	*this = toCopy;
 }
 
-DiamondTrap::DiamondTrap(std::string name):ClapTrap(name + "_clap_name"), FragTrap(name + "_clap_name"), ScavTrap(name + "_clap_name")
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name"), FragTrap(name), ScavTrap(name)
 {
-	std::cout << "the param constrator called (DiamondTrap)" << std::endl;
+	std::cout << "the param constrator called (DiamondTrap)" << std::endl; 
 	this->name = name;
 	this->HitPoint = 100;
 	this->AttackDamage = 30;
 }
 
-DiamondTrap::DiamondTrap(void)
+DiamondTrap::DiamondTrap(void): ClapTrap("Ma3ert_clap_name"),
+FragTrap("Ma3ert_clap_name"), ScavTrap("Ma3ert_clap_name")
 {
 	std::cout << "the default constrator called (DiamondTrap)" << std::endl;
 	name = "Ma3ert";

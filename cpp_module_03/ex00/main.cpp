@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:58:47 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/19 11:33:21 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/22 11:00:38 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int main()
 	std::cout << "\n============consume HP==========" << std::endl;
 
 	for (int i = 0; i < 10; i++)
-		CopySoldier.takeDamage(2);
+		CopySoldier.takeDamage(5);
 
 	std::cout << "\n============consume EP==========" << std::endl;
 

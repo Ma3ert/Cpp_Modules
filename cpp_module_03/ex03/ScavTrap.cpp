@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:36:17 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/19 20:00:04 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/22 09:52:37 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,17 @@ ScavTrap::ScavTrap(void)
 ScavTrap::~ScavTrap()
 {
 	std::cout << "the destractor called (scavtrap)" << std::endl;
+}
+
+void	ScavTrap::attack(const std::string &target)
+{
+	if (useEnergyPoint())
+	{	
+		std::cout << this->name;
+		std::cout << " Attack " << target;
+		std::cout << " Causing " << this->AttackDamage;
+		std::cout << " from ScavTrap" << std::endl;
+	}
 }
 
 void	ScavTrap::guardGate()
