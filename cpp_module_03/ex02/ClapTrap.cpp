@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:57:41 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/19 19:41:57 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/24 10:48:34 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ void ClapTrap::takeDamage(unsigned int amount)
 	if (useEnergyPoint())
 	{
 		HitPoint -= amount;
+		if (HitPoint < 0)
+			HitPoint = 0;
 		std::cout << this->name;
 		std::cout << " take -" << amount << " HP";
 		std::cout << " of damage" << std::endl;
