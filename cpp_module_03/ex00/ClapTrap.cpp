@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:57:41 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/22 11:02:00 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/24 17:31:17 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,3 +96,4 @@ void ClapTrap::beRepaired(unsigned int amount)
 		std::cout << " HP" << std::endl;
 	}
 }	
+

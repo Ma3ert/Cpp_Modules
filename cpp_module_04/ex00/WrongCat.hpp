@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   WrongCat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 10:23:18 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/24 17:49:47 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/10/24 19:34:54 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/10/25 09:11:29 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-#define FIXED_HPP
+#ifndef WrongCAT_HPP
+# define WrongCAT_HPP
 
-#include <iostream>
+# include <iostream>
+# include <string>
+# include "AbstractAnimal.hpp"
+# include "WrongAbstractAnimal.hpp"
 
-class Fixed
+class WrongCat: public WrongAbstractAnimal
 {
-	private:
-		int					value;
-		const static int	Fraction = 8;
 	public:
-		Fixed	&operator = (Fixed &toAssign);
-		int 	getRawBits( void );
-		void 	setRawBits( int const raw );
-		Fixed(Fixed &toCopy);
-		Fixed(void);
-		~Fixed();
+		WrongCat();
+		WrongCat( WrongCat const & src );
+		~WrongCat();
+		std::string	getType(void) const;
+		void	makeSound(void) const;
+		WrongCat &		operator=( WrongCat const & rhs );
 };
 
 #endif

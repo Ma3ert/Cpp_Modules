@@ -14,6 +14,10 @@
 #include "Fixed.hpp"
 #include <unistd.h>
 
+Point a;
+Point b;
+
+b  = a;
 
 Point::Point(float const newX, float const newY) : x(newX), y(newY)
 {

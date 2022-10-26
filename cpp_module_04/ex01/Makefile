@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/19 11:06:38 by Ma3ert           ###   ########.fr        #
+#    Created: 2022/10/25 11:29:48 by Ma3ert            #+#    #+#              #
+#    Updated: 2022/10/26 14:19:11 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp ClapTrap.cpp
+SRC = main.cpp Dog.cpp Cat.cpp Brain.cpp AbstractAnimal.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = ClapTrap
+NAME = AbstractAnimalBrain
 
-HEADER = ClapTrap.hpp
+HEADER = Cat.hpp Dog.hpp AbstractAnimal.hpp Brain.hpp
 
 CC = c++
 
@@ -37,7 +37,7 @@ fclean: clean
 	rm -f $(NAME)
 
 hoho: all clean
-	clear && ./$(NAME)
+	@clear && ./$(NAME)
 
 sbrdl: all clean
 	clear

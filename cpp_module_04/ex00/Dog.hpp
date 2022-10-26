@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 10:23:18 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/24 17:49:47 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/10/24 19:34:54 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/10/26 14:19:11 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FIXED_HPP
-#define FIXED_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
-#include <iostream>
+# include <iostream>
+# include <string>
+# include "AbstractAnimal.hpp"
 
-class Fixed
+class Dog: public AbstractAnimal
 {
-	private:
-		int					value;
-		const static int	Fraction = 8;
 	public:
-		Fixed	&operator = (Fixed &toAssign);
-		int 	getRawBits( void );
-		void 	setRawBits( int const raw );
-		Fixed(Fixed &toCopy);
-		Fixed(void);
-		~Fixed();
+		Dog();
+		Dog( Dog const & src );
+		~Dog();
+		std::string	getType(void) const;
+		void		makeSound(void) const;
+		Dog 		&operator=( Dog const & rhs );
 };
 
 #endif
