@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:33:30 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/26 10:38:58 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/26 16:18:20 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Dog::Dog()
 {
 	std::cout << "the default constractor called from Dog" << std::endl;
 	type = "DOG";
-	DogBrain = NULL;
+	DogBrain = new Brain;
 }
 
 Dog::Dog( const Dog & src )
