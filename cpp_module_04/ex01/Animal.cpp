@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AbstractAnimal.cpp                                         :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 18:45:44 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/26 10:32:34 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/26 15:42:16 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "AbstractAnimal.hpp"
+#include "Animal.hpp"
 
 
-AbstractAnimal::AbstractAnimal(std::string newType)
+Animal::Animal(std::string newType)
 {
-	std::cout << "param constractor called from AbstractAnimal" << std::endl;
+	std::cout << "param constractor called from animal" << std::endl;
 	type = newType;
 }
 
-AbstractAnimal::AbstractAnimal(void)
+Animal::Animal(void)
 {
-	std::cout << "default constractor called from AbstractAnimal" << std::endl;
+	std::cout << "default constractor called from animal" << std::endl;
 	type = "ma3ert";
 }
 
-AbstractAnimal::AbstractAnimal( const AbstractAnimal & toAssign )
+Animal::Animal( const Animal & toAssign )
 {
-	std::cout << "copy constractor called from AbstractAnimal" << std::endl;
+	std::cout << "copy constractor called from animal" << std::endl;
 	*this = toAssign;
 }
 
-AbstractAnimal::~AbstractAnimal()
+Animal::~Animal()
 {
-	std::cout << "the destractor called from AbstractAnimal" << std::endl;
+	std::cout << "the destractor called from animal" << std::endl;
 }
 
 
-AbstractAnimal &AbstractAnimal::operator=( AbstractAnimal const & toCopy )
+Animal &Animal::operator=( Animal const & toCopy )
 {
 	if ( this != &toCopy )
 	{
@@ -46,12 +46,12 @@ AbstractAnimal &AbstractAnimal::operator=( AbstractAnimal const & toCopy )
 	return *this;
 }
 
-std::string AbstractAnimal::getType(void) const
+std::string Animal::getType(void) const
 {
 	return (type);
 }
 
-void	AbstractAnimal::makeSound() const
+void	Animal::makeSound() const
 {
-	std::cout << "AbstractAnimal make sound" << std::endl;
+	std::cout << "animal make sound" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 12:01:38 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/25 12:16:26 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/26 16:12:43 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,9 @@ Brain::~Brain()
 	std::cout << "destractor called from brain" << std::endl;
 }
 
-Brain &Brain::operator=( Brain const & toAssign )
+Brain &Brain::operator = ( Brain const & toAssign )
 {
 	std::cout << "assign operator called from brain" << std::endl;
-	if ( this != &toAssign )
-	{}
+	(void)toAssign;
 	return *this;
 }

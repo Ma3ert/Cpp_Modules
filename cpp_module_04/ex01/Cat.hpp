@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:34:54 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/26 14:19:11 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/26 15:42:30 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 # include <iostream>
 # include <string>
 # include "Brain.hpp"
-# include "AbstractAnimal.hpp"
+# include "Animal.hpp"
 
-class Cat: public AbstractAnimal
+class Cat: public Animal
 {
 	private:
 		Brain *CatBrain;

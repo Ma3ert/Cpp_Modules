@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAbstractAnimal.hpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,24 +10,24 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WrongAbstractAnimal_HPP
-# define WrongAbstractAnimal_HPP
+#ifndef WrongANIMAL_HPP
+# define WrongANIMAL_HPP
 
 # include <iostream>
 # include <string>
 
-class WrongAbstractAnimal
+class WrongAnimal
 {
 	protected:
 		std::string type;
 	public:
-		WrongAbstractAnimal();
-		WrongAbstractAnimal( std::string newType);
-		WrongAbstractAnimal( WrongAbstractAnimal const & src );
-		virtual ~WrongAbstractAnimal();
+		WrongAnimal();
+		WrongAnimal( std::string newType);
+		WrongAnimal( WrongAnimal const & src );
+		virtual ~WrongAnimal();
 		std::string	getType(void) const;
 		void	makeSound(void) const;
-		WrongAbstractAnimal &		operator=( WrongAbstractAnimal const & rhs );
+		WrongAnimal &		operator=( WrongAnimal const & rhs );
 };
 
 #endif

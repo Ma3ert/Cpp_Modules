@@ -6,17 +6,17 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/25 11:29:48 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/26 14:19:11 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/10/26 15:42:45 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Dog.cpp Cat.cpp Brain.cpp AbstractAnimal.cpp
+SRC = main.cpp Dog.cpp Cat.cpp Brain.cpp Animal.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = AbstractAnimalBrain
+NAME = AnimalBrain
 
-HEADER = Cat.hpp Dog.hpp AbstractAnimal.hpp Brain.hpp
+HEADER = Cat.hpp Dog.hpp Animal.hpp Brain.hpp
 
 CC = c++
 

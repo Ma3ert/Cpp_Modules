@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:33:30 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/26 10:41:37 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/26 15:53:47 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ Cat::Cat()
 {
 	std::cout << "the default constractor called from Cat" << std::endl;
 	type = "CAT";
-	this->CatBrain = NULL;
+	this->CatBrain = new Brain;
 }
 
 Cat::Cat( const Cat & src )
@@ -66,3 +66,4 @@ void	Cat::SetBrain(Brain *newBrain)
 }
 
 Brain	*Cat::GetBrain(void) const { return (CatBrain); }
+

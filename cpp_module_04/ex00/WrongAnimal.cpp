@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAbstractAnimal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,34 +10,34 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAbstractAnimal.hpp"
+#include "WrongAnimal.hpp"
 
 
-WrongAbstractAnimal::WrongAbstractAnimal(std::string newType)
+WrongAnimal::WrongAnimal(std::string newType)
 {
-	std::cout << "param constractor called from WrongAbstractAnimal" << std::endl;
+	std::cout << "param constractor called from Wronganimal" << std::endl;
 	type = newType;
 }
 
-WrongAbstractAnimal::WrongAbstractAnimal(void)
+WrongAnimal::WrongAnimal(void)
 {
-	std::cout << "default constractor called from WrongAbstractAnimal" << std::endl;
+	std::cout << "default constractor called from Wronganimal" << std::endl;
 	type = "ma3ert";
 }
 
-WrongAbstractAnimal::WrongAbstractAnimal( const WrongAbstractAnimal & toAssign )
+WrongAnimal::WrongAnimal( const WrongAnimal & toAssign )
 {
-	std::cout << "copy constractor called from WrongAbstractAnimal" << std::endl;
+	std::cout << "copy constractor called from Wronganimal" << std::endl;
 	*this = toAssign;
 }
 
-WrongAbstractAnimal::~WrongAbstractAnimal()
+WrongAnimal::~WrongAnimal()
 {
-	std::cout << "the destractor called from WrongAbstractAnimal" << std::endl;
+	std::cout << "the destractor called from Wronganimal" << std::endl;
 }
 
 
-WrongAbstractAnimal &WrongAbstractAnimal::operator=( WrongAbstractAnimal const & toCopy )
+WrongAnimal &WrongAnimal::operator=( WrongAnimal const & toCopy )
 {
 	if ( this != &toCopy )
 	{
@@ -46,12 +46,12 @@ WrongAbstractAnimal &WrongAbstractAnimal::operator=( WrongAbstractAnimal const &
 	return *this;
 }
 
-std::string WrongAbstractAnimal::getType(void) const
+std::string WrongAnimal::getType(void) const
 {
 	return (type);
 }
 
-void	WrongAbstractAnimal::makeSound() const
+void	WrongAnimal::makeSound() const
 {
-	std::cout << "WrongAbstractAnimal make sound" << std::endl;
+	std::cout << "Wronganimal make sound" << std::endl;
 }

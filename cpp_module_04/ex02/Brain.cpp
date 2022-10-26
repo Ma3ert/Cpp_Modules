@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 12:01:38 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/25 12:16:26 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/26 16:13:15 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ Brain::~Brain()
 Brain &Brain::operator=( Brain const & toAssign )
 {
 	std::cout << "assign operator called from brain" << std::endl;
-	if ( this != &toAssign )
-	{}
+	(void)toAssign;
 	return *this;
 }

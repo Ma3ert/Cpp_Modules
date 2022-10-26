@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 12:02:42 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/25 12:03:55 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/26 16:10:47 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Brain
 		Brain();
 		Brain( Brain const & src );
 		~Brain();
-		Brain &operator=( Brain const & rhs );
+		Brain &operator=( Brain const & toAssign );
 };
 
 #endif

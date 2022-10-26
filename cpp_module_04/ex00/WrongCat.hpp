@@ -15,10 +15,10 @@
 
 # include <iostream>
 # include <string>
-# include "AbstractAnimal.hpp"
-# include "WrongAbstractAnimal.hpp"
+# include "Animal.hpp"
+# include "WrongAnimal.hpp"
 
-class WrongCat: public WrongAbstractAnimal
+class WrongCat: public WrongAnimal
 {
 	public:
 		WrongCat();
