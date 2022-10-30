@@ -6,17 +6,17 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/29 11:20:38 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/10/30 07:22:12 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp
+SRC = main.cpp Bureaucrat.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = Bereaucrat
+NAME = Bureaucrat
 
-HEADER = Cat.hpp Dog.hpp Animal.hpp
+HEADER = Bureaucrat.hpp
 
 CC = c++
 

@@ -6,15 +6,16 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:30:40 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/29 12:25:39 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/30 07:21:36 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(std::string newName): name(newName)
+Bureaucrat::Bureaucrat(std::string newName, int newGrade): name(newName)
 {
 	std::cout << "param constractor called from Bureaucrat" << std::endl;
+	setGrade(newGrade);
 }
 
 Bureaucrat::Bureaucrat(void) : name("Ma3ert")
@@ -40,26 +41,30 @@ int	Bureaucrat::getGrade(void)
 
 void Bureaucrat::setGrade(int newGrade)
 {
+	GradeTooHighException high;
+	GradeTooLowException Low;
 	if (newGrade < 1)
-		throw (GradeTooHighException);
+		throw (high);
 	else if (newGrade > 150)
-		throw (GradeTooLowException);
+		throw (Low);
 	else
 		grade = newGrade;
 }
 
 void Bureaucrat::inc(void)
 {
+	GradeTooHighException objet;
 	if (grade == 1)
-		throw (GradeTooHighException);
+		throw (objet);
 	else
 		grade--;
 }
 
 void	Bureaucrat::dec(void)
 {
+	GradeTooLowException objet;
 	if (grade == 150)
-		throw (GradeTooLowException);
+		throw (objet);
 	else
 		grade++;
 }
