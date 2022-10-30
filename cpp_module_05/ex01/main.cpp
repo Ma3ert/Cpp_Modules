@@ -6,18 +6,26 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:20:57 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/30 07:45:51 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/30 08:05:53 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 std::ostream	&operator << (std::ostream &out, const Bureaucrat &param)
 {
-	out << param.getName() << ", bureacrat grade " << param.getGrade() << std::endl;
+	out << param.getName() << ", bureacrat grade " << param.getGrade();
 	return (out);
 }
 
+std::ostream	&operator << (std::ostream &out, const Form &param)
+{
+	out << param.getName();
+	out << ", grade to sign: " << param.getSignGrade() << ", grade to excute: ";
+	out << param.getExcuteGrade() << ", signed" << param.getSign();
+	return (out);
+}
 int main()
 {
 	try

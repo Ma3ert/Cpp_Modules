@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*   Form.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,26 +10,33 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BUREAUCRAT_HPP
-#define BUREAUCRAT_HPP
+#ifndef Form_HPP
+#define Form_HPP
 
 #include <iostream>
 #include <string>
+#include "Bureaucrat.hpp"
 
-class Bureaucrat
+class Form
 {
 	private:
 		std::string const	name;
-		int					grade;
+		bool				sign;
+		int					gradeToSign;
+		int					gradeToExcute;
 	public:
-		Bureaucrat();
-		Bureaucrat( std::string newName, int grade);
-		Bureaucrat( Bureaucrat const & src );
-		~Bureaucrat();
-		int	getGrade(void) const;
-		const std::string getName(void) const;
-		void setGrade(int newGrade);
-		Bureaucrat	&operator=( Bureaucrat const & rhs );
+		Form();
+		Form( std::string newName, int gradeToSign, int gradeToExcute);
+		Form( Form const & src );
+		~Form();
+		const std::string	getName(void) const;
+		bool				getSign(void) const;
+		int					getSignGrade(void) const;
+		int					getExcuteGrade(void) const;
+		void				setSignGrade(int newGrade);
+		void				setExcuteGrade(int newGrade);
+		void				beSigned(Bureaucrat &B);
+		Form				&operator=( Form const & rhs );
 		class GradeTooHighException: public std::exception
 		{
 			public:
@@ -39,8 +46,6 @@ class Bureaucrat
 		{
 			virtual char const *what() const throw();
 		};
-		void	inc();
-		void	dec();
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:30:40 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/30 07:51:12 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/30 08:25:02 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,14 @@ Bureaucrat &Bureaucrat::operator=( Bureaucrat const & toCopy )
 		this->grade = toCopy.grade;
 	}
 	return *this;
+}
+
+void Bureaucrat::signForm(Form &F) const
+{
+	if (this->grade > F.getSignGrade())
+		std::cout << name << " couldn't sign " << F.getName() << " cus Bureacrat grade is too low" << std::endl;
+	else
+		std::cout << name << " sign " << F.getName() << std::endl;
 }
 
 const std::string Bureaucrat::getName(void) const {return (name);}
