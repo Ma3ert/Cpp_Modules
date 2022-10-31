@@ -6,17 +6,17 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/31 10:19:00 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/10/31 14:52:02 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Bureaucrat.cpp Form.cpp
+SRC = main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = Form
+NAME = Forms
 
-HEADER = Bureaucrat.hpp Form.hpp
+HEADER = Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp 
 
 CC = c++
 

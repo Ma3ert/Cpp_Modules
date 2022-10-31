@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:20:57 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/30 08:05:53 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/31 09:37:48 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,36 @@ int main()
 {
 	try
 	{
-		Bureaucrat name("ma3ert", 2);
-		std::cout << name;
-		std::cout << "===============" << std::endl;
-		Bureaucrat name2("walo", 0);
-		std::cout << "===============" << std::endl;
-		Bureaucrat name1("sbardila", 190);
-		std::cout << "===============" << std::endl;
+		Bureaucrat	first("name", 21);
+		Form 		ff("form", 22, 21);
+		ff.beSigned(first);
 	}
-	catch(const std::exception& e)
+	catch (std::exception &e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cout << e.what() << std::endl;
 	}
+	std::cout << "======================\n";
+	try
+	{
+		Bureaucrat	first("name", 21);
+		Form 		ff("form", 0, 2);
+		ff.beSigned(first);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "======================\n";
+	try
+	{
+		Bureaucrat	first("name", 21);
+		Form 		ff("form", 3, 2);
+		ff.beSigned(first);
+	}
+	catch (std::exception &e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	std::cout << "======================\n";
 	
 }

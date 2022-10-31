@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 10:58:47 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/22 10:56:44 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/26 18:11:48 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 int main()
 {
 	DiamondTrap Soldier("Soldier");
-	// DiamondTrap Diamond;
-	// DiamondTrap copyDiamond(Diamond);
+	DiamondTrap Diamond;
+	DiamondTrap copyDiamond(Diamond);
 
 	// std::cout << "\n=========Diamond vs soldier===========" << std::endl;
 	
@@ -35,13 +35,12 @@ int main()
 	// Diamond.beRepaired(1);
 	// Diamond.attack("Soldier");
 	// copyDiamond.takeDamage(2);
-	// copyDiamond.beRepaired(1);
+	copyDiamond.beRepaired(1);
 	
 	// std::cout << "\n============consume HP==========" << std::endl;
 
 	// for (int i = 0; i < 10; i++)
-	// 	copyDiamond.takeDamage(2);
-
+		copyDiamond.takeDamage(2);
 	// std::cout << "\n============consume EP==========" << std::endl;
 
 	// for (int i = 0; i < 10; i++)

@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 19:33:30 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/26 16:23:24 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/10/26 18:04:45 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ Dog::~Dog()
 	std::cout << "the destractor called from Dog" << std::endl;
 	delete this->DogBrain;
 }
-
 
 Dog &	Dog::operator=( Dog const & toCopy )
 {
