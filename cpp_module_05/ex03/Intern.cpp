@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 17:09:42 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/31 17:57:53 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/01 10:37:39 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,6 @@ Form *Intern::makeForm(std::string nameForm, std::string targetForm) const
 	FormNotFound notFound;
 	while (availableForm(i) != nameForm && i != 3)
 		i++;
-	std::cout << "your I: " << i << std::endl;
 	switch (i)
 	{
 		case 0:
@@ -86,6 +85,7 @@ Form *Intern::makeForm(std::string nameForm, std::string targetForm) const
 			throw(notFound);
 			break;
 	}
+	std::cout << "Intern creates" << nameForm << std::endl;
 	return (ret);
 }
 

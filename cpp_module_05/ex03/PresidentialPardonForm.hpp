@@ -23,7 +23,6 @@ class PresidentialPardonForm :public Form
 	private:
 		std::string			target;
 	public:
-		void	beSigned(Bureaucrat &B);
 		void	excute(Bureaucrat const &excutor) const;
 		PresidentialPardonForm();
 		PresidentialPardonForm(std::string target);

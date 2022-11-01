@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:30:40 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/30 07:51:12 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/01 13:35:15 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,3 +90,9 @@ Bureaucrat &Bureaucrat::operator=( Bureaucrat const & toCopy )
 }
 
 const std::string Bureaucrat::getName(void) const {return (name);}
+
+std::ostream	&operator << (std::ostream &out, const Bureaucrat &param)
+{
+	out << param.getName() << ", bureacrat grade " << param.getGrade() << std::endl;
+	return (out);
+}

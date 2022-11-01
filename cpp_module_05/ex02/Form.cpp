@@ -84,11 +84,18 @@ Form &Form::operator = ( Form const & toCopy )
 	return *this;
 }
 
-void Form::beSigned(Bureaucrat &B)
+void Form::beSigned(Bureaucrat const &B)
 {
 	GradeTooLowException low;
-	B.signForm(*this);
 	if (B.getGrade() > this->getSignGrade())
 		throw (low);
 	this->sign = true;
+}
+
+std::ostream	&operator << (std::ostream &out, const Form &param)
+{
+	out << param.getName();
+	out << ", grade to sign: " << param.getSignGrade() << ", grade to excute: ";
+	out << param.getExcuteGrade() << ", signed" << param.getSign();
+	return (out);
 }

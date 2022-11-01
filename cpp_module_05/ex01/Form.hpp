@@ -35,7 +35,7 @@ class Form
 		bool				getSign(void) const;
 		int					getSignGrade(void) const;
 		int					getExcuteGrade(void) const;
-		void				beSigned(Bureaucrat &B);
+		void				beSigned(Bureaucrat const &B);
 		void				setSign(void);
 		Form				&operator=( Form const & rhs );
 		class GradeTooHighException: public std::exception
@@ -49,5 +49,7 @@ class Form
 				virtual char const *what() const throw();
 		};
 };
+
+std::ostream	&operator << (std::ostream &out, const Form &param);
 
 #endif

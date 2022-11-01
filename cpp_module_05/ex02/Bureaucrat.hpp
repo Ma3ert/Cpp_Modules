@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:30:38 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/31 12:37:11 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/01 13:37:57 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,5 +47,7 @@ class Bureaucrat
 		void	inc();
 		void	dec();
 };
+
+std::ostream	&operator << (std::ostream &out, const Bureaucrat &param);
 
 #endif

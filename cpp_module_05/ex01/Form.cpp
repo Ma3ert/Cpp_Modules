@@ -20,7 +20,7 @@ Form::Form(std::string newName, int ToSign, int ToExcute): name(newName),
 	GradeTooLowException Low;
 	if (ToSign < 1 || ToExcute < 1)
 		throw (high);
-	else if (ToSign > 150 || ToExcute >150)
+	else if (ToSign > 150 || ToExcute > 150)
 		throw (Low);
 	sign = false;
 }
@@ -84,11 +84,18 @@ Form &Form::operator = ( Form const & toCopy )
 	return *this;
 }
 
-void Form::beSigned(Bureaucrat &B)
+void Form::beSigned(Bureaucrat const &B)
 {
 	GradeTooLowException low;
-	B.signForm(*this);
 	if (B.getGrade() > this->getSignGrade())
 		throw (low);
 	this->sign = true;
+}
+
+std::ostream	&operator << (std::ostream &out, const Form &param)
+{
+	out << param.getName();
+	out << ", grade to sign: " << param.getSignGrade() << ", grade to excute: ";
+	out << param.getExcuteGrade() << ", signed" << param.getSign();
+	return (out);
 }

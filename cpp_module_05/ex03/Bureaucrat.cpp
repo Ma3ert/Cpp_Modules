@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:30:40 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/31 18:02:31 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/01 13:22:25 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,7 +80,7 @@ char const *Bureaucrat::GradeTooLowException::what() const throw()
 	return ("GradetooLowException");
 }
 
-Bureaucrat &Bureaucrat::operator=( Bureaucrat const & toCopy )
+Bureaucrat &Bureaucrat::operator = ( Bureaucrat const & toCopy )
 {
 	if ( this != &toCopy )
 	{
@@ -91,19 +91,34 @@ Bureaucrat &Bureaucrat::operator=( Bureaucrat const & toCopy )
 
 void Bureaucrat::signForm(Form &F) const
 {
-	if (this->grade > F.getSignGrade())
-		std::cout << name << " couldn't sign " << F.getName() << " cus Bureacrat grade is too low" << std::endl;
-	else
-		std::cout << name << " sign " << F.getName() << std::endl;
+	try
+	{
+		F.beSigned(*this);
+		std::cout << this->name << " sign " << F.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->name << " cus " <<  e.what() << '\n';
+	}
 }
 
 const std::string Bureaucrat::getName(void) const {return (name);}
 
 void	Bureaucrat::excuteForm(Form const &F) const
 {
-	if (this->grade > F.getExcuteGrade())
-		std::cout << name << " couldn't sign " << F.getName() << " cus Bureacrat grade is too low" << std::endl;
-	else
+	try
+	{
+		F.excute(*this);
 		std::cout << name << " excute " << F.getName() << std::endl;
-	
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << name << " couldn't excute " << F.getName() << e.what() << std::endl;
+	}
+}
+
+std::ostream	&operator << (std::ostream &out, const Bureaucrat &param)
+{
+	out << param.getName() << ", bureacrat grade " << param.getGrade();
+	return (out);
 }

@@ -59,23 +59,9 @@ RobotomyRequestForm &				RobotomyRequestForm::operator=( RobotomyRequestForm con
 	return *this;
 }
 
-// std::ostream &			operator<<( std::ostream & o, RobotomyRequestForm const & i )
-// {
-// 	return o;
-// }
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
-
-void RobotomyRequestForm::beSigned(Bureaucrat &B)
-{
-	GradeTooLowException low;
-	B.signForm(*this);
-	if (B.getGrade() > this->getSignGrade())
-		throw (low);
-	setSign();
-}
 
 void	RobotomyRequestForm::excute(Bureaucrat const &excutor) const
 {

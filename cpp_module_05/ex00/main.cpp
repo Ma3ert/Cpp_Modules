@@ -6,17 +6,11 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:20:57 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/31 09:14:51 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/01 13:35:11 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
-std::ostream	&operator << (std::ostream &out, const Bureaucrat &param)
-{
-	out << param.getName() << ", bureacrat grade " << param.getGrade() << std::endl;
-	return (out);
-}
 
 int main()
 {

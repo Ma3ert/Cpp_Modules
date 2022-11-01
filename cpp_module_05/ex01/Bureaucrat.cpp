@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:30:40 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/30 08:25:02 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/01 13:21:41 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,10 +91,21 @@ Bureaucrat &Bureaucrat::operator=( Bureaucrat const & toCopy )
 
 void Bureaucrat::signForm(Form &F) const
 {
-	if (this->grade > F.getSignGrade())
-		std::cout << name << " couldn't sign " << F.getName() << " cus Bureacrat grade is too low" << std::endl;
-	else
-		std::cout << name << " sign " << F.getName() << std::endl;
+	try
+	{
+		F.beSigned(*this);
+		std::cout << this->name << " sign " << F.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << this->name << " cus " <<  e.what() << '\n';
+	}
 }
 
 const std::string Bureaucrat::getName(void) const {return (name);}
+
+std::ostream	&operator << (std::ostream &out, const Bureaucrat &param)
+{
+	out << param.getName() << ", bureacrat grade " << param.getGrade();
+	return (out);
+}

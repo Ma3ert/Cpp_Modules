@@ -57,28 +57,14 @@ PresidentialPardonForm &PresidentialPardonForm::operator=( PresidentialPardonFor
 	return *this;
 }
 
-// std::ostream &			operator<<( std::ostream & o, PresidentialPardonForm const & i )
-// {
-// 	return o;
-// }
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
 
-void PresidentialPardonForm::beSigned(Bureaucrat &B)
-{
-	GradeTooLowException low;
-	B.signForm(*this);
-	if (B.getGrade() > this->getSignGrade())
-		throw (low);
-	setSign();
-}
-
 void	PresidentialPardonForm::excute(Bureaucrat const &excutor) const
 {
 	GradeTooLowException objet;
-	if (excutor.getGrade() < this->getExcuteGrade())
+	if (excutor.getGrade() < this->getExcuteGrade() && this->getSign())
 		std::cout << "Informs that " << target << " has been pardoned by Zaphod Beeblebrox" << std::endl;
 	else
 		throw (objet);

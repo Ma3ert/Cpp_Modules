@@ -23,7 +23,6 @@ class RobotomyRequestForm :public Form
 	private:
 		std::string			target;
 	public:
-		void	beSigned(Bureaucrat &B);
 		void	excute(Bureaucrat const &excutor) const;
 		RobotomyRequestForm();
 		RobotomyRequestForm(std::string target);

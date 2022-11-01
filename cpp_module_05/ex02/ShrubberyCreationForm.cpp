@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:21:03 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/31 16:54:14 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/01 13:16:16 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,23 +61,9 @@ ShrubberyCreationForm &				ShrubberyCreationForm::operator=( ShrubberyCreationFo
 	return *this;
 }
 
-// std::ostream &			operator<<( std::ostream & o, ShrubberyCreationForm const & i )
-// {
-// 	return o;
-// }
-
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
-
-void ShrubberyCreationForm::beSigned(Bureaucrat &B)
-{
-	GradeTooLowException low;
-	B.signForm(*this);
-	if (B.getGrade() > this->getSignGrade())
-		throw (low);
-	setSign();
-}
 
 void	ShrubberyCreationForm::excute(Bureaucrat const &excutor) const
 {
