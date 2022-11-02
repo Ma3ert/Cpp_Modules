@@ -6,7 +6,7 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/10/31 17:50:26 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/11/02 12:10:25 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,13 +31,13 @@ $(NAME): $(OBJ) $(HEADER)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ)
+	@rm -f $(OBJ)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
-hoho: all clean
-	clear && ./$(NAME)
+hoho: all
+	clear && ./$(NAME) && make fclean
 
 sbrdl: all clean
 	clear

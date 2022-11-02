@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:13:06 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/10/31 17:00:52 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/02 10:55:09 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,18 @@ int main()
 		std::cout << "-------sign sh--------" << std::endl;
 		sh.beSigned(name);
 
-		
 		std::cout << "-------excute pr------" << std::endl;
-		pr.excute(name);
+		name.excuteForm(pr);
 		std::cout << "-------excute rb------" << std::endl;
-		rb.excute(name);
+		name.excuteForm(rb);
+		std::cout << '\n';
+		name.excuteForm(rb);
+		std::cout << '\n';
+		name.excuteForm(rb);
+		std::cout << '\n';
+		name.excuteForm(rb);
 		std::cout << "-------excute sh------" << std::endl;
-		sh.excute(name);
+		name.excuteForm(sh);
 	}
 	catch(const std::exception& e)
 	{
@@ -52,7 +57,7 @@ int main()
 	{
 		name.setGrade(150);
 		PresidentialPardonForm pr("pr");
-		pr.beSigned(name);
+		name.signForm(pr);
 	}
 	catch(std::exception &e)
 	{
@@ -64,7 +69,7 @@ int main()
 	{
 		name.setGrade(150);
 		PresidentialPardonForm pr("pr");
-		pr.excute(name);
+		name.excuteForm(pr);
 	}
 	catch(std::exception &e)
 	{

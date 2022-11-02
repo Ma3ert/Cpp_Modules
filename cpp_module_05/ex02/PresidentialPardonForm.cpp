@@ -18,19 +18,19 @@
 
 PresidentialPardonForm::PresidentialPardonForm(std::string target) : Form("PresidentialPardon", 25, 5)
 {
-	std::cout << "param constractor called from RobotomyRequest" << std::endl;
+	std::cout << "param constractor called from PresidentialPardon" << std::endl;
 	this->target = target;
 }
 
 PresidentialPardonForm::PresidentialPardonForm(): Form("PresidentialPardon", 25, 5)
 {
-	std::cout << "default constractor called from RobotomyRequest" << std::endl;
+	std::cout << "default constractor called from PresidentialPardon" << std::endl;
 	this->target = "target";
 }
 
 PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm & src ): Form("PresidentialPardon", 25, 5)
 {
-	std::cout << "copy constractor called from RobotomyRequest" << std::endl;
+	std::cout << "copy constractor called from PresidentialPardon" << std::endl;
 	*this = src;
 }
 

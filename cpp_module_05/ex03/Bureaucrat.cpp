@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:30:40 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/01 13:22:25 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/02 12:24:28 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void Bureaucrat::signForm(Form &F) const
 	}
 	catch(const std::exception& e)
 	{
-		std::cout << this->name << " cus " <<  e.what() << '\n';
+		std::cout << this->name << " couldn't sign cus " <<  e.what() << '\n';
 	}
 }
 

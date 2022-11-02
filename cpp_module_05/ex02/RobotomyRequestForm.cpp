@@ -74,7 +74,7 @@ void	RobotomyRequestForm::excute(Bureaucrat const &excutor) const
 			std::cout << target << " has been robotomized" << std::endl;
 		}
 		else
-			std::cout << target << "robotomy failed" << std::endl;
+			std::cout << target << " robotomy failed" << std::endl;
 		random++;
 		if (random == 10)
 			random = 0;

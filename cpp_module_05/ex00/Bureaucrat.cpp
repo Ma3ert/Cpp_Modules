@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:30:40 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/01 13:35:15 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/02 09:41:29 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,6 @@ const std::string Bureaucrat::getName(void) const {return (name);}
 
 std::ostream	&operator << (std::ostream &out, const Bureaucrat &param)
 {
-	out << param.getName() << ", bureacrat grade " << param.getGrade() << std::endl;
+	out << param.getName() << ", bureacrat grade " << param.getGrade();
 	return (out);
 }
