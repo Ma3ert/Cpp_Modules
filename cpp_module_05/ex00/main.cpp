@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:20:57 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/02 09:41:43 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/04 09:58:45 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int main()
 {
 	try
 	{
-		Bureaucrat name("ma3ert", 2);
+		Bureaucrat name("ma3ert", 0);
 		std::cout << name << std::endl;
 		std::cout << "===============" << std::endl;
 		Bureaucrat name2("walo", 1);

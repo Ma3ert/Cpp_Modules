@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 10:21:03 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/01 13:16:16 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/04 10:04:11 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ void	ShrubberyCreationForm::excute(Bureaucrat const &excutor) const
 {
 	GradeTooLowException objet;
 	std::ofstream fout(target + "_Shrubbery");
-	if (excutor.getGrade() < this->getExcuteGrade())
+	if (excutor.getGrade() < this->getExcuteGrade() && this->getSign())
 	{
 		fout << "              v .   ._, |_  ., 	" << std::endl;
         fout << "   `-._//  .  / /    |/_ 			" << std::endl;

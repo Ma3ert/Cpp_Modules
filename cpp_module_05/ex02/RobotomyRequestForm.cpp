@@ -67,7 +67,7 @@ void	RobotomyRequestForm::excute(Bureaucrat const &excutor) const
 {
 	GradeTooLowException objet;
 	static int	random;
-	if (excutor.getGrade() < this->getExcuteGrade())
+	if (excutor.getGrade() < this->getExcuteGrade() && this->getSign())
 	{
 		if (random % 2)
 		{

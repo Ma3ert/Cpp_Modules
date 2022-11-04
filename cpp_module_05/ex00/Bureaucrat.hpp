@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 11:30:38 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/01 13:35:08 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/04 09:57:53 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,8 @@ class Bureaucrat
 		};
 		class GradeTooLowException: public std::exception
 		{
-			virtual char const *what() const throw();
+			public:
+				virtual char const *what() const throw();
 		};
 		void	inc();
 		void	dec();
