@@ -6,12 +6,11 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 09:33:19 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/05 13:43:04 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/07 17:18:09 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#include "header.h"
 
 int	checkNumber(std::string arg)
 {
@@ -23,46 +22,63 @@ int	checkNumber(std::string arg)
 	return (1);
 }
 
-int checkMantisa(std::string arg, int pos)
+int checkExponent(std::string arg, int pos)
 {
-	std::string mantisa = arg.substr(0, pos);
-	if (!checkNumber(mantisa))
+	std::string Exponent = arg.substr(0, pos);
+	if (!checkNumber(Exponent))
 		return (0);
 	return (1);
 }
 
-int	checkExponent(std::string arg, int pos, int dec)
+int	checkMantissa(std::string arg, int pos, int dec)
 {
-	std::string exponent = arg.substr(pos, pos - arg.length() - dec);
-	if (!checkNumber(mantisa))
+	std::string mantissa = arg.substr(pos + 1, -1);
+	if (dec == 1)
+		mantissa.pop_back();
+	if (!checkNumber(mantissa))
 		return (0);
 	return (1);
 }
 
 int checkArg(std::string arg)
 {
-	int pos;
+	size_t pos;
 	int	dec = 0;
-	if (pos = arg.find('.', 0))	
+
+	if (arg.length() == 1 && isalpha(arg[0]))
+		return (CHAR);
+	if (checkNumber(arg))
+		return (INT);
+	pos = arg.find('.', 0);
+	if (pos != std::string::npos)
 	{
-		if (!checkMantisa(arg, pos))
+		if (!checkExponent(arg, pos))
 			return (0);
-		if (arg.back() == 'f')
-			dec += 1;
-		if (!checkExponent(arg, pos, dec))
+		if (arg.back() == FLOAT)
+			dec = 1;
+		if (!checkMantissa(arg, pos, dec))
 			return (0);
+		if (dec == 1)
+			return (FLOAT);
+		return (DOUBLE);
 	}
-	return (1);
+	return (0);
 }
 
 int main(int ac, char **av)
 {
+	int dec;
+
 	if (ac != 2)
 	{
-		error:
+		std::cout << "Arg Error" << std::endl;
 		return (1);
 	}
 	std::string	arg = av[1];
-	int pos;
-	if (checkArg(arg))
+	if ((dec = checkArg(arg)) && dec)
+	{
+		printFormat(arg, dec);
+		return (0);
+	}
+	std::cout << "Invalid Arg";
 }
