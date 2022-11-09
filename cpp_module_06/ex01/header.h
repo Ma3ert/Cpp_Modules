@@ -5,30 +5,19 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 13:02:15 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/09 10:59:14 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/11/09 20:50:34 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/11/09 20:52:18 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HEADER_H
 #define HEADER_H
 
-#include <climits>
-#include <iomanip>
+#include <stdint.h>
 #include <iostream>
-#include <math.h>
-#include <sstream>
-#include <cstdlib>
-#include <stdlib.h>
-#include <string>
 
-#define INT 1
-#define CHAR 2
-#define FLOAT 3
-#define DOUBLE 4
-
-void	char_hundle(std::string argu);
-void	int_hundle(std::string arg);
-void	printFormat(std::string arg, int dec);
+typedef struct Data{
+	int id;
+} Data;
 
 #endif

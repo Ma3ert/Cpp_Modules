@@ -1,34 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   Base.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 13:02:15 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/09 10:59:14 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/11/09 21:26:57 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/11/09 21:46:09 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-#define HEADER_H
+#include "Base.hpp"
 
-#include <climits>
-#include <iomanip>
-#include <iostream>
-#include <math.h>
-#include <sstream>
-#include <cstdlib>
-#include <stdlib.h>
-#include <string>
+Base::~Base()
+{
+	std::cout << "destractor called from Base" << std::endl;
+}
 
-#define INT 1
-#define CHAR 2
-#define FLOAT 3
-#define DOUBLE 4
+A::~A()
+{
+	std::cout << "destractor called from A" << std::endl;
+}
 
-void	char_hundle(std::string argu);
-void	int_hundle(std::string arg);
-void	printFormat(std::string arg, int dec);
+B::~B()
+{
+	std::cout << "destractor called from B" << std::endl;
+}
 
-#endif
+C::~C()
+{
+	std::cout << "destractor called from C" << std::endl;
+}
+
+D::~D()
+{
+	std::cout << "destractor called from D" << std::endl;
+}

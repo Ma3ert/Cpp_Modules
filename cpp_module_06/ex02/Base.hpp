@@ -1,34 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/07 13:02:15 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/09 10:59:14 by Ma3ert           ###   ########.fr       */
+/*   Created: 2022/11/09 21:25:23 by Ma3ert            #+#    #+#             */
+/*   Updated: 2022/11/09 22:22:40 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_H
-#define HEADER_H
+#ifndef BASE_H
+#define BASE_H
 
-#include <climits>
-#include <iomanip>
 #include <iostream>
-#include <math.h>
-#include <sstream>
-#include <cstdlib>
-#include <stdlib.h>
-#include <string>
 
-#define INT 1
-#define CHAR 2
-#define FLOAT 3
-#define DOUBLE 4
+class Base
+{
+	public:
+		virtual ~Base();
+};
 
-void	char_hundle(std::string argu);
-void	int_hundle(std::string arg);
-void	printFormat(std::string arg, int dec);
+class A : public Base
+{
+	public:
+		~A();
+};
+
+class B : public Base
+{
+	public:
+		~B();
+};
+
+class C : public Base
+{
+	public:
+		~C();
+};
+
+class D : public Base
+{
+	public:
+		~D();
+};
 
 #endif

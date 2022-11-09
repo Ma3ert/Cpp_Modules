@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 09:33:19 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/07 17:18:09 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/09 11:45:30 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int checkArg(std::string arg)
 	{
 		if (!checkExponent(arg, pos))
 			return (0);
-		if (arg.back() == FLOAT)
+		if (arg.back() == 'f')
 			dec = 1;
 		if (!checkMantissa(arg, pos, dec))
 			return (0);
@@ -62,6 +62,24 @@ int checkArg(std::string arg)
 			return (FLOAT);
 		return (DOUBLE);
 	}
+	return (0);
+}
+
+int	nanHundle(void)
+{
+	std::cout << "char: Impossible" << std::endl;
+	std::cout << "int: Impossible" << std::endl;
+	std::cout << "double: nan" << std::endl;
+	std::cout << "flaot: nanf" << std::endl;
+	return (0);	
+}
+
+int	infHundle(void)
+{
+	std::cout << "char: Impossible" << std::endl;
+	std::cout << "int: Impossible" << std::endl;
+	std::cout << "double: inf" << std::endl;
+	std::cout << "flaot: inff" << std::endl;
 	return (0);
 }
 
@@ -75,6 +93,11 @@ int main(int ac, char **av)
 		return (1);
 	}
 	std::string	arg = av[1];
+	if (arg == "nan" || arg == "nanf")
+		return (nanHundle());
+	if (arg == "-inf" || arg == "+inf" || arg == "-inff" || arg == "+inff"
+		|| arg == "inf" || arg == "inff")
+		return (infHundle());
 	if ((dec = checkArg(arg)) && dec)
 	{
 		printFormat(arg, dec);
