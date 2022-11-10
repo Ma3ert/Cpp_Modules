@@ -6,7 +6,7 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/11/10 11:33:08 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/11/10 11:39:11 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = uintptr
+NAME = explicit
 
-HEADER = header.h
+HEADER = header.hpp
 
 CC = c++
 

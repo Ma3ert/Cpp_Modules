@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:59:50 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/09 11:37:17 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/10 11:18:25 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ double strToDouble(std::string arg)
 int strToInt(std::string arg)
 {
 	std::stringstream	ss;
-	int				result;
+	char				result;
 	ss << arg;
 	ss >> result;
 	return (result);
