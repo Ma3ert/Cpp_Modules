@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 09:33:19 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/11 11:20:44 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/11 15:53:53 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ int	checkNumber(std::string arg)
 int checkExponent(std::string arg, int pos)
 {
 	std::string Exponent = arg.substr(0, pos);
+	if (Exponent.empty())
+		return (0);
 	if (!checkNumber(Exponent))
 		return (0);
 	return (1);
@@ -35,6 +37,8 @@ int checkExponent(std::string arg, int pos)
 int	checkMantissa(std::string arg, int pos, int dec)
 {
 	std::string mantissa = arg.substr(pos + 1, -1);
+	if (mantissa.empty())
+		return (0);
 	if (dec == 1)
 		mantissa.pop_back();
 	if (mantissa[0] == '-' || mantissa[0] == '+')
