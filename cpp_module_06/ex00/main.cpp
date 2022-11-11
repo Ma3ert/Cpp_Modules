@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 09:33:19 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/09 11:45:30 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/11 11:20:44 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	checkNumber(std::string arg)
 {
 	for (int i = 0; arg[i]; i++)
 	{
+		if (i == 0 && (arg[i] == '+' || arg[i] == '-'))
+			i++;
 		if (!isdigit(arg[i]))
 			return (0);
 	}
@@ -35,6 +37,8 @@ int	checkMantissa(std::string arg, int pos, int dec)
 	std::string mantissa = arg.substr(pos + 1, -1);
 	if (dec == 1)
 		mantissa.pop_back();
+	if (mantissa[0] == '-' || mantissa[0] == '+')
+		return (0);
 	if (!checkNumber(mantissa))
 		return (0);
 	return (1);
@@ -45,10 +49,10 @@ int checkArg(std::string arg)
 	size_t pos;
 	int	dec = 0;
 
-	if (arg.length() == 1 && isalpha(arg[0]))
-		return (CHAR);
 	if (checkNumber(arg))
 		return (INT);
+	if (arg.length() == 1)
+		return (CHAR);
 	pos = arg.find('.', 0);
 	if (pos != std::string::npos)
 	{
@@ -103,5 +107,5 @@ int main(int ac, char **av)
 		printFormat(arg, dec);
 		return (0);
 	}
-	std::cout << "Invalid Arg";
+	std::cout << "Invalid Arg" << std::endl;
 }

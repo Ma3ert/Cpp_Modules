@@ -6,7 +6,7 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/11/09 22:00:56 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/11/11 09:48:24 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ SRC = main.cpp Base.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = explicit
+NAME = dynamic
 
 HEADER = Base.hpp
 

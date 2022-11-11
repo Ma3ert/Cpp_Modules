@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 12:59:50 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/10 11:18:25 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/11 11:25:02 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ double strToDouble(std::string arg)
 	return (result);
 }
 
-int strToInt(std::string arg)
+long strToInt(std::string arg)
 {
 	std::stringstream	ss;
-	char				result;
+	long					result;
 	ss << arg;
 	ss >> result;
 	return (result);
@@ -33,7 +33,7 @@ int strToInt(std::string arg)
 int strToChar(std::string arg)
 {
 	std::stringstream	ss;
-	int				result;
+	char				result;
 	ss << arg;
 	ss >> result;
 	return (result);
@@ -49,13 +49,12 @@ float strToFloat(std::string arg)
 	return (result);
 }
 
-void	fromInt(int	input)
+void	fromInt(long	input)
 {
-	int		floatValue = 0.0;
+	float	floatValue;
 	char	charValue = 0;
-	double	doubleValue = 0.0;
+	double	doubleValue;
 
-	floatValue = static_cast<float>(input);
 	if (input < CHAR_MAX && input > CHAR_MIN)
 	{	
 		charValue = static_cast<char>(input);
@@ -66,10 +65,14 @@ void	fromInt(int	input)
 	}
 	else
 		std::cout << "char: Impossible" << std::endl;
+	floatValue = static_cast<float>(input);
 	doubleValue = static_cast<double>(input);
-	std::cout << "double: " << doubleValue << std::endl;
-	std::cout << "flaot: " << floatValue << "f" << std::endl;
-	std::cout << "int: " << input << std::endl;
+	std::cout << "double: " << std::fixed << doubleValue << std::endl;
+	std::cout << "flaot: " << std::fixed << floatValue << "f" << std::endl;
+	if (input > INT_MAX || input < INT_MIN)
+		std::cout << "int: impossible" << std::endl;
+	else
+		std::cout << "int: " << input << std::endl;
 }
 
 void	fromFloat(float input)
@@ -81,7 +84,7 @@ void	fromFloat(float input)
 	std::cout << "int: " << intValue << std::endl;
 
 	double	doubleValue = static_cast<double>(input);
-	std::cout << "double: " << doubleValue << std::endl;
+	std::cout << "double: " << std::fixed << doubleValue << std::endl;
 	
 	if (input < CHAR_MAX && input > CHAR_MIN)
 	{
@@ -93,7 +96,7 @@ void	fromFloat(float input)
 	}
 	else
 		std::cout << "char: Impossible" << std::endl;
-	std::cout << "float: " << input << "f" << std::endl;
+	std::cout << "float: " << std::fixed << input << "f" << std::endl;
 }
 
 void	fromDouble(double input)
@@ -124,11 +127,11 @@ void	fromDouble(double input)
 	if (input < INT_MAX && input > INT_MIN)
 	{
 		floatValue = static_cast<float>(input);
-		std::cout << "float: " << floatValue << "f" << std::endl;
+		std::cout << "float: " << std::fixed << floatValue << "f" << std::endl;
 	}
 	else
 		std::cout << "float: Impossible" << std::endl;
-	std::cout << "double: " << input << std::endl;
+	std::cout << "double: " << std::fixed << input << std::endl;
 }
 
 void	fromChar(char input)
@@ -138,8 +141,8 @@ void	fromChar(char input)
 	float	floatValue = static_cast<float>(input);
 
 	std::cout << "int: " << intValue << std::endl;
-	std::cout << "float: " << floatValue << "f" << std::endl;
-	std::cout << "double: " << doubleValue << std::endl;
+	std::cout << "float: " << std::fixed << floatValue << "f" << std::endl;
+	std::cout << "double: " << std::fixed << doubleValue << std::endl;
 	std::cout << "char: '" << input << "'\n";
 }
 
