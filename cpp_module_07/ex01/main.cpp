@@ -6,27 +6,23 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:07:20 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/11 09:47:26 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/12 15:15:19 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 
-void ft_ft_char(void *c)
+template <typename T>
+void ft_ft(T &arg, T toSet)
 {
-	*(char *)c += 1;
-}
-
-void ft_ft_int(void *c)
-{
-	*(int *)c += 1;
+	arg = toSet;
 }
 
 template <typename T>
-void iter(T *array, int lenght, void (*f)(void *))
+void iter(T *array, int lenght, void (*f)(T &, T))
 {
 	for (int i = 0; i < lenght; ++i)
-		f(array[i]);
+		f(array[i], 97);
 }
 
 int main()
@@ -34,13 +30,13 @@ int main()
 	int intTab[] = {1, 2, 3, 4};
 	char charTab[] = {'a', 'b', 'c'};
 
-	// ==============int test===============
+	std::cout << "==============int test===============" << std::endl;
 
 	for (int i = 0; i < 4; ++i)
 		std::cout << intTab[i] << " ";
 	std::cout << std::endl;
 
-	iter(&intTab, 3, ft_ft_int);
+	iter(&intTab[0], 3, ft_ft);
 
 	for (int i = 0; i < 4; ++i)
 		std::cout << intTab[i] << " ";
@@ -51,7 +47,7 @@ int main()
 		std::cout << charTab[i] << " ";
 	std::cout << std::endl;
 
-	iter(&charTab, 1, ft_ft_char);
+	iter(&charTab[0], 3, ft_ft);
 
 	for (int i = 0; i < 3; ++i)
 		std::cout << charTab[i] << " ";

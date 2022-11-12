@@ -6,17 +6,17 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/11/12 11:45:09 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/11/12 23:16:07 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp
+SRC = main.cpp Array.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = iter
+NAME = Array
 
-HEADER = iter.hpp
+HEADER = Array.hpp
 
 CC = c++
 
