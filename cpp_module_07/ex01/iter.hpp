@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 12:08:50 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/13 13:32:08 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/13 16:51:16 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,14 @@
 
 #include <iostream>
 
-template <typename T>
-void ft_ft(T &arg, T toSet)
-{
-	arg = toSet;
-}
+template< typename T >
+void print( T const & x ) { std::cout << x << std::endl; }
 
 template <typename T>
-void iter(T *array, int lenght, void (*f)(T &, T))
+void iter(T *array, int lenght, void (*f)(T const &))
 {
 	for (int i = 0; i < lenght; ++i)
-		f(array[i], 97);
+		f(array[i]);
 }
 
 #endif

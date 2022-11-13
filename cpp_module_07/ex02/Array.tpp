@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 16:06:14 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/13 13:51:26 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/13 16:13:39 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,7 @@
 
 template <typename T>
 Array<T>::Array(): n(0)
-{
-	this->a = new T;
-}
+{}
 
 template <typename T>
 Array<T>::Array(unsigned int N): n(N)
