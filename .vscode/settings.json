@@ -61,6 +61,7 @@
 		"vector": "cpp",
 		"iomanip": "cpp",
 		"fstream": "cpp",
-		"array.hpp": "c"
+		"array.hpp": "c",
+		"*.tpp": "cpp"
 	}
 }

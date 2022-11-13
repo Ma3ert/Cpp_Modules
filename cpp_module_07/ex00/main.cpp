@@ -6,33 +6,11 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/10 11:06:29 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/10 12:06:32 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2022/11/13 13:30:51 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.hpp"
-
-template <typename T>
-T &max(T &a, T &b)
-{
-	return (a > b ? a : b);
-}
-
-template <typename T>
-T &min(T &a, T &b)
-{
-	return (a < b ? a : b);
-}
-
-template <typename T>
-void swap(T &a, T &b)
-{
-	T c;
-
-	c = b;
-	b = a;
-	a = c;
-}
 
 int main()
 {
@@ -40,9 +18,9 @@ int main()
 	int b = 3;
 
 	std::cout << "a = " << a << ", b = " << b << std::endl;
-	swap( a, b );
+	::swap( a, b );
 	std::cout << "a = " << a << ", b = " << b << std::endl;
-	std::cout << "min( a, b ) = " << min( a, b ) << std::endl;
+	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
 	std::cout << "max( a, b ) = " << max( a, b ) << std::endl;
 
 	std::string c = "chaine1";

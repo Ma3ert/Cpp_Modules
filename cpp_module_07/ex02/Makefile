@@ -6,11 +6,11 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/11/12 23:16:07 by Ma3ert           ###   ########.fr        #
+#    Updated: 2022/11/13 10:47:50 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp Array.cpp
+SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

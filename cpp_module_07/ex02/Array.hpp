@@ -10,31 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ARRAY_HPP
-# define ARRAY_HPP
+#pragma once
 
-# include <iostream>
-# include <string>
+#include <iostream>
 
 template <typename T>
 class Array
 {
 	private:
 		T *a;
-		unsigned int n;
+		size_t n;
 	public:
 		Array();
 		Array(unsigned int N);
 		Array( Array const & src );
 		~Array();
 		Array	&operator = ( Array const & rhs );
-		T const	&operator [] ( unsigned int index ) const;
-		T	 	&operator [] ( unsigned int index );
-		int		size(void) const;
+		T const	&operator [] ( size_t index ) const;
+		T	 	&operator [] ( size_t index );
+		size_t		size(void) const;
 		class IndexOutOfRange : public std::exception
 		{
 			virtual char const *what() const throw();
 		};
 };
 
-#endif
+#include "Array.tpp"
