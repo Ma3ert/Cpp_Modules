@@ -6,17 +6,17 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2022/11/14 16:58:30 by Ma3ert           ###   ########.fr        #
+#    Updated: 2023/04/10 14:57:42 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp
+SRC = main.cpp BitcoinExchange.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = easyfind
+NAME = btc
 
-HEADER = easyfind.hpp
+HEADER =  BitcoinExchange.hpp
 
 CC = c++
 

@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 12:57:52 by Ma3ert            #+#    #+#             */
-/*   Updated: 2022/11/15 16:26:58 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2023/01/21 20:55:00 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,23 @@
 # include <stack>
 # include <algorithm>
 
-template <typename T, class Container = std::deque<T> >
-class MutantStack: public std::stack<T, Container>
+template <typename T, typename container = std::deque<T> >
+class	MutantStack : public std::stack<T, container>
 {
-	public:
-		MutantStack();
-		MutantStack( MutantStack const & src );
-		~MutantStack();
-		MutantStack &		operator=( MutantStack const & rhs );
-		typedef typename Container::iterator	iterator;
-		iterator begin(void) { return this->c.begin(); }
-		iterator end(void) { return this->c.end(); }
+	public	:
+		typedef typename std::stack<T, container>::container_type::iterator	iterator;
+		iterator	begin()
+		{
+			return this->c.begin();
+		}
+		iterator	end()
+		{
+			return this->c.end();
+		}
+	// private :
+	// 	_Container	c;
 };
 
-#include "MutantStack.tpp"
+// #include "MutantStack.tpp"
 
 #endif
