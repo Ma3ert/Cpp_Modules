@@ -6,7 +6,7 @@
 /*   By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 13:57:31 by Ma3ert            #+#    #+#             */
-/*   Updated: 2023/04/10 17:44:46 by Ma3ert           ###   ########.fr       */
+/*   Updated: 2023/04/11 15:27:44 by Ma3ert           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ class BitcoinExchange
 		bool 	parseDataBaseLine(std::string &line);
 		bool 	validDate(std::string &date);
 		float	convertExchangeRate(std::string &exchangeRate);
+		bool	checkValue(const char *str);
 		void	printResult(float value, std::string &date);
 		BitcoinExchange(std::string fileName);
 		BitcoinExchange( BitcoinExchange const & src );

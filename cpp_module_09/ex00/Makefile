@@ -6,7 +6,7 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2023/04/10 14:57:42 by Ma3ert           ###   ########.fr        #
+#    Updated: 2023/04/11 15:12:14 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ fclean: clean
 	@rm -f $(NAME)
 
 hoho: all
-	clear && ./$(NAME) && make fclean
+	clear && ./$(NAME) input.txt && make fclean
 
 sbrdl: all clean
 	clear
