@@ -6,17 +6,17 @@
 #    By: Ma3ert <yait-iaz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/18 11:41:17 by Ma3ert            #+#    #+#              #
-#    Updated: 2023/04/12 13:56:50 by Ma3ert           ###   ########.fr        #
+#    Updated: 2023/04/12 13:56:45 by Ma3ert           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRC = main.cpp RPN.cpp
+SRC = main.cpp PmergeMe.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-NAME = RPN
+NAME = PmergeMe
 
-HEADER =  RPN.hpp
+HEADER =  PmergeMe.hpp
 
 CC = c++
 
