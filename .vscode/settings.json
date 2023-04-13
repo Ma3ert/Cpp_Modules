@@ -64,6 +64,9 @@
 		"array.hpp": "c",
 		"*.tpp": "cpp",
 		"deque": "cpp",
-		"stack": "cpp"
+		"stack": "cpp",
+		"__tree": "cpp",
+		"bit": "cpp",
+		"map": "cpp"
 	}
 }
